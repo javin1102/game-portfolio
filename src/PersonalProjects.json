@@ -1,0 +1,79 @@
+{
+	"farmers": {
+		"contributions": [
+			"NPC spawner with Object Pooling",
+			"Tile based object placement",
+			"Restaurant game loop",
+			"Inventory and hotbar system",
+			"Player controller",
+			"Gameplay design",
+			"Day & Night system"
+		],
+		"modal": {
+			"title": "Farmer's Restaurant Simulator",
+			"desc": "In this project, you play as a farmer who owns a restaurant. You can use the ingredients you grow on the farm to make food in the restaurant. As of now, there are four different recipes you can make. My primary responsibility in this project was on the restaurant side, such as taking orders for NPCs, serving food, and placing restaurant furniture. I was also responsible for creating an NPC spawner with object pooling, NPC behavior with FSM, inventory system, all UI scripts, save system using JSON, scene management, upgrades and player controller. Unfortunately, the game is only available in Indonesian language as it is my project for my thesis. ",
+			"challenges": [
+				"The save system in this project is complicated because of the large number of objects and variables that need to be saved. For example, in the farming ground, each farm object needs to be saved so that when the player loads the game, each object is in the same position, type, and state. There are two types of farm objects: plant tiles and trees. We use the resources index to specify the type of each object, which refers to the index in the resources folder.",
+				"To save farm objects, I create an intermediate class called SerializableFarmObjectData to serialize and deserialize data. I then create SerializablePlantTileData, which inherits from SerializableFarmObjectData, to save plant tiles. For other farm objects, I use SerializableFarmObjectData.",
+				"To load farm objects, we loop through the JSON array and transform each data into SerializableFarmObjectData. We generate an object based on its type and then check if it is a plant tile. If so, we want to set all of its states."
+			],
+			"code": {
+				"url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=%2520%2520%2520%2520private%2520async%2520void%2520SaveFarmObjectData%28%29%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520farmObjects%2520%253D%2520m_FarmObjects.ToArray%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520int%2520plantTileResourcesIndex%2520%253D%2520m_ResourcesLoader.GetFarmObjectIndex%253CPlantTile%253E%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520JSONArray%2520jsonArray%2520%253D%2520new%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520foreach%2520%28var%2520obj%2520in%2520farmObjects%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28obj.Value.ResourcesIndex%2520%253D%253D%2520plantTileResourcesIndex%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520PlantTile%2520plantTile%2520%253D%2520obj.Value%2520as%2520PlantTile%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520SerializablePlantTileData%2520plantTileData%2520%253D%2520new%28plantTile%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520jsonArray.Add%28plantTileData.Serialize%28%29%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520else%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%252F%252Fsave%2520regular%2520farm%2520object%2520such%2520as%2520tree%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520SerializableFarmObjectData%2520farmObjectData%2520%253D%2520new%28obj.Value%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520jsonArray.Add%28farmObjectData.Serialize%28%29%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520await%2520m_SaveManager.SaveData%28jsonArray.ToString%28%29%252C%2520Utils.FARM_OBJECTS_FILENAME%29%253B%250A%2520%2520%2520%2520%257D"
+			},
+			"snapshots": [
+				"images/modal_farmers_1.png",
+				"images/modal_farmers_2.png",
+				"images/modal_farmers_3.png",
+				"images/modal_farmers_4.png"
+			],
+			"githubUrl": "https://github.com/javin1102/Farmer-s-Restaurant-Simulator",
+			"itchUrl": "https://javinrio112.itch.io/farmers-restaurant-simulator",
+			"youtubeUrl": "https://www.youtube.com/embed/UAZbbZ3CTNU"
+		}
+	},
+
+	"tenk": {
+		"contributions": [
+			"Simple enemy AI",
+			"UI and audio system",
+			"Helped friend in debugging tank behaviour",
+			"Gameplay design"
+		],
+		"modal": {
+			"title": "Tenk Seconds",
+			"desc": "Participated in 3 days bullethell jam couple months after learning game developnent. For this game jam, i was responsible in game design, enemyAI, sound, and UI.",
+			"challenges": [
+				"The most challenging part in this project is collaborating because I was inexperienced using Github. As a result there was a lot of conflict and I wouldn’t be able to resolve it. We have to rollback couple times but luckily we managed to submit the game in time."
+			],
+
+			"snapshots": [
+				"images/modal_tenk_1.png",
+				"images/modal_tenk_2.png",
+				"images/modal_tenk_3.png",
+				"images/modal_tenk_4.png",
+				"images/modal_tenk_5.png"
+			],
+			"itchUrl": "https://kixstart.itch.io/tenk-seconds",
+			"youtubeUrl": "https://www.youtube.com/embed/FLZHSewuF0U"
+		}
+	},
+
+	"deballs": {
+		"contributions": ["Gameplay design and code"],
+		"modal": {
+			"title": "De'balls",
+			"desc": "This is my solo project 3 months after learning Unity and originally made for mobile devices. The gameplay is simple, just don’t let incoming balls get to the bottom of your screen. You can’t shoot if those balls are inside of your shooting range. There are some buffs such as slowmo, heal, and rangeless. You can also do some upgrades. You are not recommended to shoot continuously because there might be a trap. If you want to try it, zoom out your screen to 50%.",
+			"challenges": [
+				"Making a trajectory prediction is the challenging part in this project. Luckily, there was a lot of tutorials in Youtube that can help me achieve it. "
+			],
+
+			"snapshots": [
+				"images/modal_deballs_1.png",
+				"images/modal_deballs_2.png",
+				"images/modal_deballs_3.png",
+				"images/modal_deballs_4.png"
+			],
+			"itchUrl": "https://javinrio112.itch.io/deballs"
+		}
+	}
+}

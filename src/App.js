@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Helmet } from "react-helmet";
+import Navbar from "./Components/Navbar";
+import Banner from "./Components/Banner";
+import ProfessionalProjects from "./Components/ProfessionalProjects";
+import PersonalProjects from "./Components/PersonalProjects";
+import ContactMe from "./Components/ContactMe";
+import Footer from "./Components/Footer";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Helmet>
+				<meta name="viewport" content="initial-scale=1, width=device-width" />
+			</Helmet>
+			<Navbar />
+			<Banner />
+			<ProfessionalProjects />
+			<PersonalProjects />
+			<ContactMe />
+			<Footer />
+		</>
+	);
 }
 
 export default App;
