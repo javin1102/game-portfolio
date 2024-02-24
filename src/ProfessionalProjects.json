@@ -1,100 +1,127 @@
 {
-	"vrArcade": {
-		"contributions": [
-			"Implemented multiplayer with PUN2",
-			"Programmed 10 arcades behavior",
-			"Player and arcade interactions",
-			"Custom outfit and skin system for player"
-		],
+    "stickerBookPuzzle": {
+        "contributions": [
+            "Improved level development workflow by creating a level editor tools",
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Used 3rd party SDK, such as Lion SDK, Balancy SDK, AppLovin SDK, etc to implement features inside Unity",
+            "Implemented A/B test in certain features, based on the publisher decision",
+            "Create a tool for addressables auto generation"
+        ],
+        "modal": {
+            "title": "Sticker Book Puzzle",
+            "desc": "I felt so lucky I was able to contribute in this project. In fact, this is the first monetized game I've ever participated in with over 5M downloads in Playstore and Appstore. As a Game Programmer, my job is to implement the feature that has been discussed and bug fixing. We also used couples of external SDKs to support this project and was given an opportunity to put my hands down in these SDKs. This project give me a huge headstart in Hyper-Casual game scope",
+            "challenges": [
+                "The challenge when I first working on this project is my lack of knowledge in analytics & monetization in Hyper Casual game. There are terms that is new to me such as A/B Test, Rewarded Video (RV), Insterstitial Ads, Cost Per Install (CPI), retention and so on. But I was able to pick up and adapt quickly",
+                "This is also my first time working with professional programmer and working in a large codebase. This enforce me to read other people code, inspect how they build certain feature, and used that knowledge to build my own features",
+                "Another challenge I faced was the level developent proccess. A level could have more than 100 to 1000 stickers. As you can imagine, working with 100-1000 array of sticker classes in Unity built-in array inspector is a pain, so I took the initiative of building a custom window editor which really improved the flow of level development as it provide some additional function and better layout"
+            ],
+            "snapshots": [
+                "images/book_window_editor.png",
+                "images/book_window_editor_code.png"
+            ],
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.sticker&hl=id&gl=US",
+            "appstoreUrl": "https://apps.apple.com/id/app/sticker-book-color-by-number/id6450409974?l=id"
+        }
+    },
+    "vrArcade": {
+        "contributions": [
+            "Implemented multiplayer with PUN2",
+            "Programmed 10 arcades behavior",
+            "Player and arcade interactions",
+            "Custom outfit and skin system for player"
+        ],
 
-		"modal": {
-			"title": "VR Arcade Game",
-			"desc": "This was the first VR project I made and also where I learned networking. In this project, I was responsible for implementing all the required features. I faced many challenges due to my lack of experience. However, after a lot of trial and error, research, and reading documentation, I was able to complete my tasks.",
-			"challenges": [
-				"The first challenge I faced was creating a VR project without a VR headset. This posed a huge problem because I wouldn't be able to test the features I created. Originally, the plan was for me to make the feature and for my mentor to test it. However, I realized this was inefficient. After conducting some research, I discovered the XR Device Simulator, which simulates VR input to the keyboard.",
-				"The second challenge was synchronizing each arcade state, such as playing, stopping, spawning, scoring, and timing. This was also my first time learning networking using PUN2, and I encountered a bunch of bugs and errors when I first started using it. However, after some time, I became more comfortable and was able to finish my tasks on time.",
-				"Bowling is one of the most challenging arcade games to create. First, you need to detect whether a pin has been knocked down or not and count the total number of knocked down pins. Once you have counted the pins, you need to apply the bowling scoring rules to determine whether it is a spare, strike, or neither, move to next attempt or next frame, and finally calculating final score. The rules for scoring in bowling are quite complicated. When dealing with knocked down pins, there is an easy solution: count the up vector angle of each pin. If the angle is less than a certain threshold (e.g. 70 degrees), then we can conclude that the pin is no longer standing straight."
-			],
-			"code": {
-				"url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=%2520%2520%2520%2520%2520%2520%2520%2520void%2520CalculatePin%28%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%2520%21photonView.IsMine%2520%29%2520return%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%2520m_HasCount%2520%29%2520return%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_FallAngleFromSurface%2520%253D%2520Mathf.Asin%28%2520transform.forward.y%2520%29%2520*%2520Mathf.Rad2Deg%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%2520m_FallAngleFromSurface%2520%253C%252070%2520%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Manager.FallenPins%2520%252B%253D%25201%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Manager.ExistingPins%2520-%253D%25201%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Destroy%2520%253D%2520true%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_HasCount%2520%253D%2520true%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Manager.AudioPlayer.PlaySource_RPC%28%2522Pin_Crash%2522%252C%2520RpcTarget.All%29%253B%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D"
-			},
-			"snapshots": ["images/modal_VR_1.png", "images/modal_VR_2.png"]
-		}
-	},
+        "modal": {
+            "title": "VR Arcade Game",
+            "desc": "This was the first VR project I made and also where I learned networking. In this project, I was responsible for implementing all the required features. I faced many challenges due to my lack of experience. However, after a lot of trial and error, research, and reading documentation, I was able to complete my tasks.",
+            "challenges": [
+                "The first challenge I faced was creating a VR project without a VR headset. This posed a huge problem because I wouldn't be able to test the features I created. Originally, the plan was for me to make the feature and for my mentor to test it. However, I realized this was inefficient. After conducting some research, I discovered the XR Device Simulator, which simulates VR input to the keyboard.",
+                "The second challenge was synchronizing each arcade state, such as playing, stopping, spawning, scoring, and timing. This was also my first time learning networking using PUN2, and I encountered a bunch of bugs and errors when I first started using it. However, after some time, I became more comfortable and was able to finish my tasks on time.",
+                "Bowling is one of the most challenging arcade games to create. First, you need to detect whether a pin has been knocked down or not and count the total number of knocked down pins. Once you have counted the pins, you need to apply the bowling scoring rules to determine whether it is a spare, strike, or neither, move to next attempt or next frame, and finally calculating final score. The rules for scoring in bowling are quite complicated. When dealing with knocked down pins, there is an easy solution: count the up vector angle of each pin. If the angle is less than a certain threshold (e.g. 70 degrees), then we can conclude that the pin is no longer standing straight."
+            ],
+            "code": {
+                "url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=%2520%2520%2520%2520%2520%2520%2520%2520void%2520CalculatePin%28%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%2520%21photonView.IsMine%2520%29%2520return%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%2520m_HasCount%2520%29%2520return%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_FallAngleFromSurface%2520%253D%2520Mathf.Asin%28%2520transform.forward.y%2520%29%2520*%2520Mathf.Rad2Deg%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%2520m_FallAngleFromSurface%2520%253C%252070%2520%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Manager.FallenPins%2520%252B%253D%25201%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Manager.ExistingPins%2520-%253D%25201%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Destroy%2520%253D%2520true%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_HasCount%2520%253D%2520true%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520m_Manager.AudioPlayer.PlaySource_RPC%28%2522Pin_Crash%2522%252C%2520RpcTarget.All%29%253B%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D"
+            },
+            "snapshots": ["images/modal_VR_1.png", "images/modal_VR_2.png"]
+        }
+    },
 
-	"SamsulEscape": {
-		"contributions": [
-			"FSM for enemy AI, FOV System for enemy",
-			"Used renderer feature stencil for camera mask",
-			"Player behaviour",
-			"Gameplay Design"
-		],
+    "SamsulEscape": {
+        "contributions": [
+            "FSM for enemy AI, FOV System for enemy",
+            "Used renderer feature stencil for camera mask",
+            "Player behaviour",
+            "Gameplay Design"
+        ],
 
-		"modal": {
-			"title": "Samsul Escape",
-			"desc": "This game was developed and published in three weeks and consists of five levels. I was responsible and creating all of the main features, including player movement, enemy AI, sound, UI, scene management, particle effects, and more.",
-			"challenges": [
-				"The part that I found most challenging was creating the circle mask for the camera. I achieved this by using a simple Sign Distance Field (SDF) and making it a child of the camera. Next, I used the renderer feature from URP to perform stencil comparison. Additionally, I wanted the player to know what was going on even if their view was blocked by walls, which is i performed a lot of stencil comparison and depth testing."
-			],
-			"code": {
-				"url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=%252F%252FCircle%2520Mask%250Afloat%2520dist%2520%253D%2520length%28i.uv%29%253B%250Adist%2520%253D%25201%2520-%2520step%281%252C%2520dist%29%253B%250Aclip%28dist%2520-%25201%29%253B%250Areturn%2520dist%2520*.05f%253B"
-			},
-			"snapshots": [
-				"images/modal_samsul_1.png",
-				"images/modal_samsul_2.png",
-				"images/modal_samsul_3.png",
-				"images/modal_samsul_4.png",
-				"images/modal_samsul_5.png",
-				"images/modal_samsul_6.png"
-			],
-			"youtubeUrl": "https://www.youtube.com/embed/X__4qB2iPbQ",
-			"playstoreUrl": "https://play.google.com/store/apps/details?id=com.Accelist.com.unity.SamsulEscape&hl=en"
-		}
-	},
+        "modal": {
+            "title": "Samsul Escape",
+            "desc": "This game was developed and published in three weeks and consists of five levels. I was responsible and creating all of the main features, including player movement, enemy AI, sound, UI, scene management, particle effects, and more.",
+            "challenges": [
+                "The part that I found most challenging was creating the circle mask for the camera. I achieved this by using a simple Sign Distance Field (SDF) and making it a child of the camera. Next, I used the renderer feature from URP to perform stencil comparison. Additionally, I wanted the player to know what was going on even if their view was blocked by walls, which is i performed a lot of stencil comparison and depth testing."
+            ],
+            "code": {
+                "url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=%252F%252FCircle%2520Mask%250Afloat%2520dist%2520%253D%2520length%28i.uv%29%253B%250Adist%2520%253D%25201%2520-%2520step%281%252C%2520dist%29%253B%250Aclip%28dist%2520-%25201%29%253B%250Areturn%2520dist%2520*.05f%253B"
+            },
+            "snapshots": [
+                "images/modal_samsul_1.png",
+                "images/modal_samsul_2.png",
+                "images/modal_samsul_3.png",
+                "images/modal_samsul_4.png",
+                "images/modal_samsul_5.png",
+                "images/modal_samsul_6.png"
+            ],
+            "youtubeUrl": "https://www.youtube.com/embed/X__4qB2iPbQ",
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.Accelist.com.unity.SamsulEscape&hl=en"
+        }
+    },
 
-	"BOOM": {
-		"contributions": [
-			"Used Fluid's behaviour tree for enemy AI",
-			"Player behaviour",
-			"Save system using serialization",
-			"Programmed scripts required for core game loop",
-			"Gameplay Design"
-		],
-		"modal": {
-			"title": "BOOM",
-			"desc": "This 3D top-down shooter game was inspired by a game called Archero. I was responsible and creating all of the main features, including player movement, upgrades, enemy AI, sound, UI, and more. However, I was not satisfied with the end product because the player is difficult to control. If I were given another chance, I would proceed with a better player controller. This game is developed and published in three weeks",
-			"challenges": [
-				"The most challenging part for me was implementing a behavior tree for the enemy. To accomplish this, I utilized the Fluid Behavior Tree plugin found on Github. By default, the enemy has four states: idle, patrol, chase, and attack. However, some enemies have a special state such as defend which will reduce incoming damage and range attack."
-			],
-			"code": {
-				"url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=using%2520CleverCrow.Fluid.BTs.Tasks%253B%250Ausing%2520CleverCrow.Fluid.BTs.Trees%253B%250A%250Apublic%2520class%2520EnemyBehaviorTree%250A%257B%250A%250A%2520%2520%2520%2520public%2520BehaviorTree%2520patrolTree%253B%250A%2520%2520%2520%2520public%2520BehaviorTree%2520chaseTree%253B%250A%2520%2520%2520%2520public%2520EnemyBehaviorTree%28AIController%2520enemy%29%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520patrolTree%2520%253D%2520new%2520BehaviorTreeBuilder%28enemy.gameObject%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Sequence%28%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Condition%28%28%29%2520%253D%253E%2520enemy.IsPatrol%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Do%28%2522Patrol%2522%252C%2520%28%29%2520%253D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520enemy.Patroling%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520return%2520TaskStatus.Success%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.End%28%29.Build%28%29%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520chaseTree%2520%253D%2520new%2520BehaviorTreeBuilder%28enemy.gameObject%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Sequence%28%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Condition%28%28%29%2520%253D%253E%2520enemy.CanChase%2520%257C%257C%2520enemy.IsAlerted%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Do%28%2522Chase%2522%252C%2520%28%29%2520%253D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520enemy.Chasing%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520return%2520TaskStatus.Success%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.End%28%29.Build%28%29%253B%250A%2520%2520%2520%2520%257D%250A%250A%257D%250A"
-			},
-			"snapshots": ["images/modal_boom_1.png", "images/modal_boom_2.png"],
-			"playstoreUrl": "https://play.google.com/store/apps/details?id=com.Accelist.com.unity.BOOM&hl=en",
-			"youtubeUrl": "https://www.youtube.com/embed/Cn-8XYbTg8Y"
-		}
-	},
+    "BOOM": {
+        "contributions": [
+            "Used Fluid's behaviour tree for enemy AI",
+            "Player behaviour",
+            "Save system using serialization",
+            "Programmed scripts required for core game loop",
+            "Gameplay Design"
+        ],
+        "modal": {
+            "title": "BOOM",
+            "desc": "This 3D top-down shooter game was inspired by a game called Archero. I was responsible and creating all of the main features, including player movement, upgrades, enemy AI, sound, UI, and more. However, I was not satisfied with the end product because the player is difficult to control. If I were given another chance, I would proceed with a better player controller. This game is developed and published in three weeks",
+            "challenges": [
+                "The most challenging part for me was implementing a behavior tree for the enemy. To accomplish this, I utilized the Fluid Behavior Tree plugin found on Github. By default, the enemy has four states: idle, patrol, chase, and attack. However, some enemies have a special state such as defend which will reduce incoming damage and range attack."
+            ],
+            "code": {
+                "url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=using%2520CleverCrow.Fluid.BTs.Tasks%253B%250Ausing%2520CleverCrow.Fluid.BTs.Trees%253B%250A%250Apublic%2520class%2520EnemyBehaviorTree%250A%257B%250A%250A%2520%2520%2520%2520public%2520BehaviorTree%2520patrolTree%253B%250A%2520%2520%2520%2520public%2520BehaviorTree%2520chaseTree%253B%250A%2520%2520%2520%2520public%2520EnemyBehaviorTree%28AIController%2520enemy%29%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520patrolTree%2520%253D%2520new%2520BehaviorTreeBuilder%28enemy.gameObject%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Sequence%28%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Condition%28%28%29%2520%253D%253E%2520enemy.IsPatrol%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Do%28%2522Patrol%2522%252C%2520%28%29%2520%253D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520enemy.Patroling%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520return%2520TaskStatus.Success%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.End%28%29.Build%28%29%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520chaseTree%2520%253D%2520new%2520BehaviorTreeBuilder%28enemy.gameObject%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Sequence%28%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Condition%28%28%29%2520%253D%253E%2520enemy.CanChase%2520%257C%257C%2520enemy.IsAlerted%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.Do%28%2522Chase%2522%252C%2520%28%29%2520%253D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520enemy.Chasing%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520return%2520TaskStatus.Success%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.End%28%29.Build%28%29%253B%250A%2520%2520%2520%2520%257D%250A%250A%257D%250A"
+            },
+            "snapshots": ["images/modal_boom_1.png", "images/modal_boom_2.png"],
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.Accelist.com.unity.BOOM&hl=en",
+            "youtubeUrl": "https://www.youtube.com/embed/Cn-8XYbTg8Y"
+        }
+    },
 
-	"diving": {
-		"contributions": [
-			"Player Upgrades",
-			"Enemy spawner and behaviour",
-			"Sea depth calculation",
-			"Sound Ambience"
-		],
-		"modal": {
-			"title": "Project Diving",
-			"desc": "2D casual game, the first project that that i got when i joined internship. Developed and published in two weeks. As a player, you need to find 5 toxic barrels that is hidden somewhere deep in the sea. The deeper, the darker and more dangerous it gets. Use flashlight to help you explore the sea.",
-			"challenges": [
-				"Spawning is one of the challenging parts of this project. To optimize the game as much as possible, spawning at random positions is not enough because, for example, if the player is on the surface, we don't want to spawn something that is beneath 40m. However, we also don't want to spawn it inside the camera because it will look weird if it suddenly pops in.",
-				"In this case, for the X spawn position, I spawn on the opposite side of the player's position. If the player is on the right side, then spawn on the left side, and vice versa. For the Y position, we need to know which direction the player is moving. If the player is moving downwards, then the Y position should be somewhere between below the viewport and the center of the viewport, and vice versa. If the player is near the surface, then we should definitely spawn below the player. Lastly, if the player is idling, we can set the Y position to anywhere relative to the viewport."
-			],
-			"code": {
-				"url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=%2520%2520%2520%2520IEnumerator%2520spawnDebris%28%29%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520float%2520spawnY%2520%253D%2520SpawnYPos%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520float%2520spawnX%2520%253D%2520SpawnXPos%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520Vector2%2520spawnPos%2520%253D%2520camera.ViewportToWorldPoint%28new%2520Vector2%28spawnX%252C%2520spawnY%29%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520int%2520spawnIdx%2520%253D%2520Random.Range%280%252C%2520SpawnIdx%28debrisType.Count%252C1%252C1%29%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520GameObject%2520debris%2520%253D%2520Instantiate%28debrisType%255BspawnIdx%255D%252C%2520spawnPos%252C%2520Quaternion.identity%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520Destroy%28debris%252C%252025f%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520hasSpawnDebris%2520%253D%2520true%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520yield%2520return%2520new%2520WaitForSeconds%281.5f%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520hasSpawnDebris%2520%253D%2520false%253B%250A%2520%2520%2520%2520%257D"
-			},
-			"snapshots": ["images/modal_diving_1.png", "images/modal_diving_2.png"],
-			"playstoreUrl": "https://play.google.com/store/apps/details?id=com.Accelist.com.unity.ProjectDiving&hl=en",
-			"youtubeUrl": "https://www.youtube.com/embed/Vk8fg3w-tT0"
-		}
-	}
+    "diving": {
+        "contributions": [
+            "Player Upgrades",
+            "Enemy spawner and behaviour",
+            "Sea depth calculation",
+            "Sound Ambience"
+        ],
+        "modal": {
+            "title": "Project Diving",
+            "desc": "2D casual game, the first project that that i got when i joined internship. Developed and published in two weeks. As a player, you need to find 5 toxic barrels that is hidden somewhere deep in the sea. The deeper, the darker and more dangerous it gets. Use flashlight to help you explore the sea.",
+            "challenges": [
+                "Spawning is one of the challenging parts of this project. To optimize the game as much as possible, spawning at random positions is not enough because, for example, if the player is on the surface, we don't want to spawn something that is beneath 40m. However, we also don't want to spawn it inside the camera because it will look weird if it suddenly pops in.",
+                "In this case, for the X spawn position, I spawn on the opposite side of the player's position. If the player is on the right side, then spawn on the left side, and vice versa. For the Y position, we need to know which direction the player is moving. If the player is moving downwards, then the Y position should be somewhere between below the viewport and the center of the viewport, and vice versa. If the player is near the surface, then we should definitely spawn below the player. Lastly, if the player is idling, we can set the Y position to anywhere relative to the viewport."
+            ],
+            "code": {
+                "url": "https://carbon.now.sh/embed?bg=rgba%2824%2C30%2C44%2C1%29&t=one-dark&wt=none&l=text%2Fx-csharp&width=969.25&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=12px&lh=133%25&si=false&es=1x&wm=false&code=%2520%2520%2520%2520IEnumerator%2520spawnDebris%28%29%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520float%2520spawnY%2520%253D%2520SpawnYPos%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520float%2520spawnX%2520%253D%2520SpawnXPos%28%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520Vector2%2520spawnPos%2520%253D%2520camera.ViewportToWorldPoint%28new%2520Vector2%28spawnX%252C%2520spawnY%29%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520int%2520spawnIdx%2520%253D%2520Random.Range%280%252C%2520SpawnIdx%28debrisType.Count%252C1%252C1%29%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520GameObject%2520debris%2520%253D%2520Instantiate%28debrisType%255BspawnIdx%255D%252C%2520spawnPos%252C%2520Quaternion.identity%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520Destroy%28debris%252C%252025f%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520hasSpawnDebris%2520%253D%2520true%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520yield%2520return%2520new%2520WaitForSeconds%281.5f%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520hasSpawnDebris%2520%253D%2520false%253B%250A%2520%2520%2520%2520%257D"
+            },
+            "snapshots": [
+                "images/modal_diving_1.png",
+                "images/modal_diving_2.png"
+            ],
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.Accelist.com.unity.ProjectDiving&hl=en",
+            "youtubeUrl": "https://www.youtube.com/embed/Vk8fg3w-tT0"
+        }
+    }
 }
