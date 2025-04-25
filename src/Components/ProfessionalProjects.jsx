@@ -2,7 +2,7 @@ import { ProjectsLayout, Project } from "./Project";
 import SectionHeader from "./SectionHeader";
 import BOOM from "../images/logo_boom.png";
 import SamsulEscape from "../images/logo_samsul_escape.png";
-import Diving from "../images/logo_diving.png";
+import CircleSort from "../images/logo_circle_sort.webp";
 import VR from "../images/logo_vr.png";
 import StickerBookPuzzle from "../images/logo_sticker.png";
 import React from "react";
@@ -22,6 +22,13 @@ const ProfessionalProjects = () => {
         <section id="projects" className="bg-dark py-12">
             <SectionHeader>Professional Projects</SectionHeader>
             <ProjectsLayout>
+                <Project
+                    src={CircleSort}
+                    title="Circle Sort"
+                    contributions={projects.circleSort.contributions}
+                    onClick={handleOpen.bind(this, projects.circleSort.modal)}
+                    overview="Physics based hyper casual game. Match color and clear rings"
+                />
                 <Project
                     src={StickerBookPuzzle}
                     title="Sticker Book Puzzle"
@@ -53,14 +60,6 @@ const ProfessionalProjects = () => {
                     contributions={projects.BOOM.contributions}
                     onClick={handleOpen.bind(this, projects.BOOM.modal)}
                     overview="3D Top down shooter. Kill all enemies and unlock new level"
-                />
-                <Project
-                    src={Diving}
-                    title="Project Diving (Android)"
-                    contributions={projects.diving.contributions}
-                    onClick={handleOpen.bind(this, projects.diving.modal)}
-                    overview="2D casual game. Find 5 toxic barrels located under the sea. 
-					Collect trashes for money and use money for upgrade"
                 />
             </ProjectsLayout>
             <DetailModal

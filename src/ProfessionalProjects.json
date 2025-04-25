@@ -1,7 +1,31 @@
 {
+    "circleSort": {
+        "contributions": [
+            "Implemented system to flexibly attach any object to the ring as an obstacle or buff",
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Used 3rd party SDK, such as Lion SDK, AppLovin SDK, etc to implement features inside Unity",
+            "Implemented A/B test in certain features, based on the game designer decision",
+            "Implemented UI Animation using PrimeTween Library"
+        ],
+        "modal": {
+            "title": "Circle Sort",
+            "desc": "Another project that we're still maintaining while working on other project. Have a lot of fun developing this game because of its unique gameplay. There's also meta feature where player can build and upgrade buildings for extra rewards",
+            "challenges": [
+                "At first, the goal system in this game is written in a non-flexible way, where everytime the game designer want to add a new obstacle as a goal, we need to add another if else in the code. I realized this problem, and abstract the implementation using interface. Now the code is much more maintanable"
+            ],
+            "snapshots": [
+                "images/modal_circlesort_1.png",
+                "images/modal_circlesort_2.png",
+                "images/modal_circlesort_3.png",
+                "images/modal_circlesort_4.png"
+            ],
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.circlesort&hl=en"
+        }
+    },
     "stickerBookPuzzle": {
         "contributions": [
             "Improved level development workflow by creating a level editor tools",
+            "Implemented card gacha system and animations using DoTween",
             "Collaborate closely with other divisions, translate any feature requirement into Unity",
             "Used 3rd party SDK, such as Lion SDK, Balancy SDK, AppLovin SDK, etc to implement features inside Unity",
             "Implemented A/B test in certain features, based on the publisher decision",
