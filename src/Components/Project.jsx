@@ -32,7 +32,7 @@ export const Project = ({
             </ul>
             {url ? (
                 <a className="underline" target="blank" href={url}>
-                    App Store &rarr;{" "}
+                    Play Store &rarr;{" "}
                 </a>
             ) : (
                 ""

@@ -6,6 +6,9 @@ import CircleSort from "../images/logo_circle_sort.webp";
 import BlockUp from "../images/logo-blockup.png";
 import FindMatch from "../images/logo-findmatch.png";
 import Duet from "../images/logo-duet.webp";
+import Teners from "../images/logo-teners.webp";
+import Diff from "../images/logo-diff.webp";
+import CoinDash from "../images/logo-coindash.webp";
 import VR from "../images/logo_vr.png";
 import StickerBookPuzzle from "../images/logo_sticker.png";
 import React from "react";
@@ -61,7 +64,28 @@ const ProfessionalProjects = () => {
                     title="Duet"
                     contributions={projects.duet.contributions}
                     overview="A puzzle game inspired from tango"
-                    url="https://play.google.com/store/apps/details?id=com.game5mobile.duet&hl=in&gl=US"
+                    url="https://play.google.com/store/apps/details?id=com.game5mobile.duet&hl=en&gl=US"
+                />
+                <Project
+                    src={CoinDash}
+                    title="Coin Dash"
+                    contributions={projects.coindash.contributions}
+                    overview="Sort the coins to the tray to clear the level"
+                    url="https://play.google.com/store/apps/details?id=com.game5mobile.coindash&hl=en&gl=US"
+                />
+                <Project
+                    src={Diff}
+                    title="Spot Differences"
+                    contributions={projects.difference.contributions}
+                    overview="Find the difference between two pictures"
+                    url="https://play.google.com/store/apps/details?id=com.game5mobile.difference&hl=en&gl=US"
+                />
+                <Project
+                    src={Teners}
+                    title="Teners"
+                    contributions={projects.teners.contributions}
+                    overview="Match pairs to create sum of 10"
+                    url="https://play.google.com/store/apps/details?id=com.game5mobile.teners&hl=en%5C&gl=US"
                 />
                 <Project
                     src={VR}

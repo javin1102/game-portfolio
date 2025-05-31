@@ -29,7 +29,7 @@
             "challenges": [
                 "I spent a lot of time researching how to render outline for the cage border that is needed to highlight it for tutorial purpose. Each tile has a border that is seperated into 8 modular parts and those parts will be activate or deactivate based on the level layout. The active border on each tile can overlap with other border from other tile and that produce a weird result if we perform a outline on each single modular border object. After researching for quite some time, I found the screen space outline solution that uses Unity Renderer Feature and it works perfectly in this case"
             ],
-            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.blockup&hl=in&gl=US"
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.blockup&hl=en&gl=US"
         }
     },
     "duet": {
@@ -43,9 +43,32 @@
             "challenges": [
                 "I spent a lot of time researching how to render outline for the cage border that is needed to highlight it for tutorial purpose. Each tile has a border that is seperated into 8 modular parts and those parts will be activate or deactivate based on the level layout. The active border on each tile can overlap with other border from other tile and that produce a weird result if we perform a outline on each single modular border object. After researching for quite some time, I found the screen space outline solution that uses Unity Renderer Feature and it works perfectly in this case"
             ],
-            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.blockup&hl=in&gl=US"
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.blockup&hl=en&gl=US"
         }
     },
+    "teners": {
+        "contributions": [
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Implemented diamond obstacle system",
+            "Implemented goal animation using cubic bezier curve that is calculated based on tile position in runtime"
+        ]
+    },
+    "difference": {
+        "contributions": [
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Implemented camera system (ex: panning, zooming)",
+            "Implemented 2 responsive camera to calculate camera viewport based on device aspect ratio"
+        ]
+    },
+
+    "coindash": {
+        "contributions": [
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Impemented obstacle spawning logic (ex: cage, grass)",
+            "Implemented obstacle tutorial flow"
+        ]
+    },
+
     "circleSort": {
         "contributions": [
             "Implemented system to flexibly attach any object to the ring as an obstacle or buff",
@@ -90,8 +113,8 @@
                 "images/book_window_editor.png",
                 "images/book_window_editor_code.png"
             ],
-            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.sticker&hl=id&gl=US",
-            "appstoreUrl": "https://apps.apple.com/id/app/sticker-book-color-by-number/id6450409974?l=id"
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.sticker&hl=en&gl=US",
+            "appstoreUrl": "https://apps.apple.com/id/app/sticker-book-color-by-number/id6450409974?l=en"
         }
     },
     "vrArcade": {
