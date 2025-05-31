@@ -1,4 +1,51 @@
 {
+    "findMatch": {
+        "contributions": [
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Used 3rd party SDK, such as Lion SDK, AppLovin SDK, etc to implement features inside Unity",
+            "Implemented A/B test in certain features, based on the game designer decision",
+            "Implemented polished cards animation"
+        ],
+        "modal": {
+            "title": "Find & Match",
+            "desc": "This is the project where it really improve my tweening animation skill",
+            "challenges": [
+                "The biggest challenge in this project was animating the objective cards, as I didn't have much experience with animation at the time. Due to the animation requirements, the card layout had to be calculated manually, and the deck needed to be spread evenly to make it visually engaging."
+            ],
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.hidden&hl=en"
+        }
+    },
+    "blockup": {
+        "contributions": [
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Used 3rd party SDK, such as Lion SDK, AppLovin SDK, etc to implement features inside Unity",
+            "Implemented gameplay and obstacle tutorial",
+            "Utilized custom render passes to render outline for the block selection",
+            "Added screen space outline for colored hole tutorial highlight"
+        ],
+        "modal": {
+            "title": "Block Up",
+            "desc": "I learn how to inject custom render pass into unity URP, and utilize unity SRP feature",
+            "challenges": [
+                "I spent a lot of time researching how to render outline for the cage border that is needed to highlight it for tutorial purpose. Each tile has a border that is seperated into 8 modular parts and those parts will be activate or deactivate based on the level layout. The active border on each tile can overlap with other border from other tile and that produce a weird result if we perform a outline on each single modular border object. After researching for quite some time, I found the screen space outline solution that uses Unity Renderer Feature and it works perfectly in this case"
+            ],
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.blockup&hl=in&gl=US"
+        }
+    },
+    "duet": {
+        "contributions": [
+            "Collaborate closely with other divisions, translate any feature requirement into Unity",
+            "Implemented hint logic to help player understand the rule for the first 10 level"
+        ],
+        "modal": {
+            "title": "Block Up",
+            "desc": "I learn how to inject custom render pass into unity URP, and utilize unity SRP feature",
+            "challenges": [
+                "I spent a lot of time researching how to render outline for the cage border that is needed to highlight it for tutorial purpose. Each tile has a border that is seperated into 8 modular parts and those parts will be activate or deactivate based on the level layout. The active border on each tile can overlap with other border from other tile and that produce a weird result if we perform a outline on each single modular border object. After researching for quite some time, I found the screen space outline solution that uses Unity Renderer Feature and it works perfectly in this case"
+            ],
+            "playstoreUrl": "https://play.google.com/store/apps/details?id=com.game5mobile.blockup&hl=in&gl=US"
+        }
+    },
     "circleSort": {
         "contributions": [
             "Implemented system to flexibly attach any object to the ring as an obstacle or buff",

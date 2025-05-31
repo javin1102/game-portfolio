@@ -3,6 +3,9 @@ import SectionHeader from "./SectionHeader";
 import BOOM from "../images/logo_boom.png";
 import SamsulEscape from "../images/logo_samsul_escape.png";
 import CircleSort from "../images/logo_circle_sort.webp";
+import BlockUp from "../images/logo-blockup.png";
+import FindMatch from "../images/logo-findmatch.png";
+import Duet from "../images/logo-duet.webp";
 import VR from "../images/logo_vr.png";
 import StickerBookPuzzle from "../images/logo_sticker.png";
 import React from "react";
@@ -38,6 +41,27 @@ const ProfessionalProjects = () => {
                         projects.stickerBookPuzzle.modal
                     )}
                     overview="A hyper casual game about placing stickers with lots of level type"
+                />
+                <Project
+                    src={BlockUp}
+                    title="Block Up"
+                    contributions={projects.blockup.contributions}
+                    onClick={handleOpen.bind(this, projects.blockup.modal)}
+                    overview="Drag the block into the hole and clear it. Remove all blocks from the level"
+                />
+                <Project
+                    src={FindMatch}
+                    title="Find & Match"
+                    contributions={projects.findMatch.contributions}
+                    onClick={handleOpen.bind(this, projects.findMatch.modal)}
+                    overview="A match 3 puzzle"
+                />
+                <Project
+                    src={Duet}
+                    title="Duet"
+                    contributions={projects.duet.contributions}
+                    overview="A puzzle game inspired from tango"
+                    url="https://play.google.com/store/apps/details?id=com.game5mobile.duet&hl=in&gl=US"
                 />
                 <Project
                     src={VR}
