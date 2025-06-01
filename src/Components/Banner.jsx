@@ -17,7 +17,7 @@ const Banner = () => {
                 <p className="text-[.6rem] text-[#ededed] font-light lg:text-sm">
                     Hi there, I’m Javin from Indonesia. Learned game development
                     in Binus University. The program I took was Game Application
-                    and Technology. I have 2+ year of work experience and have
+                    and Technology. I have 3+ year of work experience and have
                     high curiousity in a lot of things and always strive to
                     expand my skills in this field
                 </p>
